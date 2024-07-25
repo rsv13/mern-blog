@@ -1,10 +1,13 @@
-import { Button, Navbar, TextInput } from 'flowbite-react'
+import { Avatar, Button, Dropdown, DropdownHeader, DropdownItem, Navbar, TextInput } from 'flowbite-react'
 import React from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { FaMoon } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
 import { Link, useLocation } from 'react-router-dom'
 
 export default function Header() {
+
+    const { currentUser } = useSelector(state => state.user);
 
     const path = useLocation().pathname;
   return (
@@ -21,11 +24,27 @@ export default function Header() {
                 <Button className='w-12 h-10  sm:inline' color='gray' pill >
                     <FaMoon />
                 </Button>
-                <Link to="/sign-in">
+                {currentUser ? (
+                    <Dropdown arrowIcon= {false} inline label={
+                        <Avatar alt='user' img={currentUser.profilePicture}
+                        rounded/>
+                    }>
+                        <DropdownHeader>
+                            <span className='block text-sm'>@{currentUser.username}</span>
+                            <span className='block text-sm font medium truncate'>@{currentUser.email}</span>
+                        </DropdownHeader>
+                        <Link to={'/dashboard/tab=profile'}>
+                            <Dropdown.Item> Profile</Dropdown.Item>
+                        </Link>
+                        <Dropdown.Divider />
+                        <DropdownItem>Sign Out</DropdownItem>
+
+                    </Dropdown>
+                ) : (<Link to="/sign-in">
                     <Button gradientDuoTone='purpleToBlue' outline>
                     Sign In
                     </Button>
-                </Link>
+                </Link>)}
                 <Navbar.Toggle />
             </div>
             <Navbar.Collapse>
