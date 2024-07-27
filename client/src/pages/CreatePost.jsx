@@ -12,9 +12,9 @@ export default function CreatePost() {
                 <TextInput type='text' placeholder='Title Required' id='title' className='flex-1'/>
                 <Select>
                     <option value='uncategorised'>Select Category</option>
-                    <option value='Mental Health'>Improve your Mental Health</option>
-                    <option value='NHS'>NHS Updates</option>
-                    <option value='Prime Wales'>Prime Wales</option>
+                    <option value='wellbeing'>Well-Being</option>
+                    <option value='nhs'>NHS Updates</option>
+                    <option value='primewales'>Prime Wales</option>
                 </Select>
             </div>
             <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
