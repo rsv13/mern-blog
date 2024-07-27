@@ -11,3 +11,15 @@ body{
     height: 100%;
     overflow-y: auto;
 }
+
+/* Default light mode placeholder color */
+.ql-editor::before {
+    color: rgba(0, 0, 0, 0.6); /* default placeholder color */
+  }
+  
+  /* Dark mode placeholder color */
+  .dark .ql-editor::before {
+    color: rgba(255, 255, 255, 0.804); /* white placeholder color for dark mode */
+  }
+  
+  
