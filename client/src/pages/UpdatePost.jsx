@@ -5,9 +5,9 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { app } from '../firebase';
-import { UseSelector, useSelector } from 'react-redux';
 
 
 export default function UpdatePost() {
