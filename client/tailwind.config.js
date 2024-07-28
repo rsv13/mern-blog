@@ -11,6 +11,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require("flowbite-react/tailwind").plugin(), // Adds Flowbite React plugin
+    require("flowbite-react/tailwind").plugin(),
+    require("tailwind-scrollbar"),
   ],
 };
