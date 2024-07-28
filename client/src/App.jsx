@@ -5,10 +5,12 @@ import Header from './components/Header'
 import OnlyAdminPrivateRoute from './components/OnlyAdminPrivateRoute'
 import PrivateRoute from './components/PrivateRoute'
 import About from './pages/About'
+import ContactUs from './pages/ContactUs'
 import CreatePost from './pages/CreatePost'
 import Dashboard from './pages/Dashboard'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
+import Publication from './pages/Publication'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Survey from './pages/Survey'
@@ -33,6 +35,8 @@ export default function App() {
           </Route>
           <Route path="/projects" element={<Projects />} />
           <Route path="/survey" element={<Survey />} />
+          <Route path="/publication" element={<Publication />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
         <Footer />
         </BrowserRouter>

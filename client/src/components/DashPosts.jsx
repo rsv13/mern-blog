@@ -73,7 +73,6 @@ export default function DashPosts() {
             <Table.HeadCell>Post Image</Table.HeadCell>
             <Table.HeadCell>Post Title</Table.HeadCell>
             <Table.HeadCell>Category</Table.HeadCell>
-            <Table.HeadCell>View</Table.HeadCell>
             <Table.HeadCell>Delete</Table.HeadCell>
             <Table.HeadCell><span>Edit</span></Table.HeadCell>  
           </Table.Head>
@@ -92,7 +91,6 @@ export default function DashPosts() {
                     </Link>
                   </Table.Cell>
                 <Table.Cell>{post.category}</Table.Cell>
-                <Table.Cell><span>View</span></Table.Cell>
                 <Table.Cell><span onClick={() => {
                   setShowModal(true);
                   setPostIdToDelete(post._id);

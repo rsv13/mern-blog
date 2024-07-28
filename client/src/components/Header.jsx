@@ -92,6 +92,16 @@ export default function Header() {
                             Survey
                         </Link>
                     </Navbar.Link>
+                    <Navbar.Link active = {path === "/publication"} as={'div'}>
+                        <Link to="/Publication">
+                            Publication
+                        </Link>
+                    </Navbar.Link>
+                    <Navbar.Link active = {path === "/contactus"} as={'div'}>
+                        <Link to="/ContactUs">
+                            Contact Us
+                        </Link>
+                    </Navbar.Link>
                 </Navbar.Collapse>
     </Navbar>
   )
