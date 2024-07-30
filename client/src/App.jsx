@@ -9,6 +9,7 @@ import ContactUs from './pages/ContactUs'
 import CreatePost from './pages/CreatePost'
 import Dashboard from './pages/Dashboard'
 import Home from './pages/Home'
+import PostPage from './pages/PostPage'
 import Projects from './pages/Projects'
 import Publication from './pages/Publication'
 import SignIn from './pages/SignIn'
@@ -26,6 +27,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/post/:postSlug" element={<PostPage />} />
+
           <Route element={<PrivateRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
           </Route>

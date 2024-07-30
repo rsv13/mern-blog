@@ -22,4 +22,18 @@ body{
     color: rgba(255, 255, 255, 0.804); /* white placeholder color for dark mode */
   }
   
+  .post-content p{
+    font-size: 1.05rem;
+    line-height: 1.6;
+    overflow-y: auto;
+    height: 100%;
+  }
   
+  .post-content img{
+    max-width: 50%;
+    height: 50%;
+  }
+
+  .dark .post-content p{
+    color: red;
+  }
